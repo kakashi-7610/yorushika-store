@@ -1,0 +1,29 @@
+.album-item {
+  flex-grow: 1;
+  max-width: 765px;
+
+  >.title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  >.title::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .album-item {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

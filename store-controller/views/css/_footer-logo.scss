@@ -1,0 +1,15 @@
+.footer-logo {
+  display: block;
+  width: 235px;
+  margin-top: 90px;
+
+  >.logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-logo {
+    margin-top: 60px;
+  }
+}

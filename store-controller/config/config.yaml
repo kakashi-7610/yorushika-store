@@ -1,0 +1,6 @@
+server:
+  hostname: "localhost"
+  port: "8080"
+  static: "./views"
+log:
+  filename: "store-controller.log"

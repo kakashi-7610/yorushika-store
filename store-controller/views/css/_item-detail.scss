@@ -1,0 +1,14 @@
+.item-detail {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  >.text {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  >.title {
+    font-weight: bold;
+  }
+}

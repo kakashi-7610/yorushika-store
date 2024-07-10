@@ -1,0 +1,23 @@
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  >.title {
+    font-weight: bold;
+  }
+
+  >.spotify {
+    background-color: #93FFAB;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    font-size: 13px;
+    padding: 8px;
+    min-width: 102px;
+    font-weight: bold;
+  }
+
+  >.spotify:hover {
+    background-color: #00FF3B;
+  }
+}

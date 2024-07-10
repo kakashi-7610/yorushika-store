@@ -1,0 +1,14 @@
+.album-list {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 220px);
+  column-gap: 50px;
+  row-gap: 40px;
+}
+
+@media (max-width: 800px) {
+  .album-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+  }
+}

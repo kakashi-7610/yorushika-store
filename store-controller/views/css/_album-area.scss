@@ -1,0 +1,20 @@
+.album-area {
+  margin-top: 20px;
+  display: flex;
+
+  >.image {
+    width: 50%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 800px) {
+  .album-area {
+    display: block;
+
+    >.image {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

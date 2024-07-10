@@ -1,0 +1,15 @@
+.item-list {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: scroll;
+}
+
+@media (max-width: 800px) {
+  .item-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

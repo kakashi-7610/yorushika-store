@@ -1,0 +1,19 @@
+.link-button {
+  text-align: center;
+  margin-top: 40px;
+
+  >.link {
+    background-color: #f4dd64;
+    display: inline-block;
+    min-width: 180px;
+    line-height: 48px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  >.link:hover {
+    background-color: #d8b500;
+  }
+}

@@ -1,0 +1,16 @@
+.form-area {
+  background-color: #f8f8f8;
+  border: 1px solid #aaaaaa;
+  margin-top: 25px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  >.error {
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #eb4f32;
+    width: 100%;
+  }
+}

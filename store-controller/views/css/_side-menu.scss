@@ -1,0 +1,15 @@
+.side-menu {
+  flex-shrink: 0;
+  margin-right: 60px;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .side-menu {
+    background-color: #f8f8f8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 60px;
+    margin-right: 0;
+  }
+}

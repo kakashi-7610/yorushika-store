@@ -1,0 +1,21 @@
+.first-lead {
+  max-width: 1200px;
+  margin: 60px auto;
+
+  >.lead {
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .first-lead {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    >.lead {
+      text-align: left;
+      font-size: 15px;
+    }
+  }
+}

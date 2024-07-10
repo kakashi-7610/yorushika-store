@@ -1,0 +1,57 @@
+.about-album {
+  margin-left: 30px;
+
+  >.text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  >.spotify {
+    background-color: #93FFAB;
+    display: inline-block;
+    min-width: 180px;
+    line-height: 48px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bold;
+  }
+
+  >.spotify:hover {
+    background-color: #04d334;
+  }
+
+  >.link {
+    background-color: #f4dd64;
+    display: inline-block;
+    min-width: 180px;
+    line-height: 48px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bold;
+  }
+
+  >.link:hover {
+    background-color: #d8b500;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-album {
+    margin-top: 20px;
+    margin-left: 0;
+
+    >.spotify {
+      width: 100%;
+    }
+
+    >.link {
+      width: 100%;
+    }
+  }
+}

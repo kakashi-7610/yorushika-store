@@ -1,0 +1,14 @@
+.list-item {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+  .list-item {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

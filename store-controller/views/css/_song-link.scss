@@ -1,0 +1,8 @@
+.song-link {
+  display: block;
+  transition-duration: 0.2s;
+}
+
+.song-link:hover {
+  transform: scale(1.05);
+}

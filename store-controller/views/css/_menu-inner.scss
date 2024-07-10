@@ -1,0 +1,21 @@
+.menu-inner {
+  position: sticky;
+  top: 30px;
+  left: 0;
+  right: 0;
+
+  >.title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu-inner {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

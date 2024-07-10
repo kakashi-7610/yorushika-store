@@ -1,0 +1,24 @@
+.grid-list {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  column-gap: 95px;
+  row-gap: 70px;
+  justify-content: center;
+
+  &.-mypage {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-list {
+    margin-top: 45px;
+    row-gap: 40px;
+  }
+}
