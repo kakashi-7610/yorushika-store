@@ -1,0 +1,57 @@
+.top-image {
+  height: 310px;
+  background-image: url(../img/main/overview.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4b2c14;
+
+  &.-recommend {
+    background-image: url(../img/main/recommend.jpg);
+    text-shadow: 3px 3px 8px #000000;
+  }
+
+  &.-sanctuary {
+    background-image: url(../img/main/sanctuary.jpg);
+    text-shadow: 1px 1px 5px #4b2c14;
+    color: #000000;
+    background-position: center calc(50% + 50px);
+  }
+
+  &.-mypage {
+    background-image: url(../img/main/mypage.png);
+    text-shadow: none;
+    color: #000000;
+  }
+
+  >.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  >.text {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  >.username {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 800px) {
+  .top-image {
+    &.-sanctuary {
+      background-position: center center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.feature-text {
+  // 画像と合計した値が900pxになるように設定している
+  max-width: 500px;
+  margin-right: 40px;
+
+  &.-reverse {
+    margin-right: 0;
+    margin-left: 40px;
+  }
+
+  >.title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  >.title::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+  }
+
+  >.text {
+    font-size: 15px;
+    line-height: 28px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .feature-text {
+    margin-right: 0;
+
+    &.-reverse {
+      margin-left: 0;
+    }
+  }
+}

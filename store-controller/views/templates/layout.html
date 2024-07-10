@@ -1,0 +1,21 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yorushika store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta name="description" content="ページの概要を記載します">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/static/css/yorushika-style.css">
+  <script src="/static/js/base.js"></script>
+</head>
+<body>
+  {{template "header"}}
+  {{template "content" .}}
+  {{template "footer"}}
+</body>
+</html>
+{{end}}

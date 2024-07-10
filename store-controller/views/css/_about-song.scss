@@ -1,0 +1,57 @@
+.about-song {
+  display: flex;
+  position: relative;
+  line-height: 30px;
+  margin: 15px 0 15px 40px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: solid 1px #f4dd64;
+  align-items: center;
+  justify-content: space-between;
+
+  >.song {
+    margin-left: 25px;
+  }
+
+  >.spotify {
+    background-color: #93FFAB;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    font-size: 13px;
+    margin: 5px;
+    min-width: 102px;
+    text-align: center;
+  }
+
+  >.spotify:hover {
+    background-color: #00FF3B;
+  }
+}
+
+.about-song:before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  left: -30px;
+  width: 30px;
+  height: 32px;
+  background: #f4dd64;
+  text-align: center;
+  color: #ffffff;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 800px) {
+  .about-song {
+    margin: 10px 0 10px 25px;
+
+    >.song {
+      margin-left: 10px;
+    }
+  }
+}

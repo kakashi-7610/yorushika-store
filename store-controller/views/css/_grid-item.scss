@@ -1,0 +1,41 @@
+.grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  >.username {
+    position: absolute;
+    top: 0%;
+    left: calc(100% + 18px);
+    font-size: 12.5px;
+    white-space: nowrap;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    font-weight: bold;
+  }
+
+  // aタグ内にaタグを定義した時直接cssを当てることができなかったため、ここで定義している。
+  >.spotify {
+    background-color: #93FFAB;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    font-size: 13px;
+    padding: 8px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+  }
+
+  >.spotify:hover {
+    background-color: #00FF3B;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-item {
+    >.spotify {
+      margin-top: 15px;
+    }
+  }
+}

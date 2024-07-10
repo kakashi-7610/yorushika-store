@@ -1,0 +1,21 @@
+.form-label {
+  width: 200px;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+
+  .required::after {
+    content: '必須';
+    font-size: 11px;
+    color: #eb4f32;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .form-label {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}

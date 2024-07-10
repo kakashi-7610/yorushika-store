@@ -1,0 +1,29 @@
+.contents-footer {
+  color: #ffffff;
+  background-color: #0f0f0b;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  >.member {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 28px;
+  }
+
+  >.formed {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contents-footer {
+
+    >.member {
+      font-size: 20px;
+    }
+  }
+}

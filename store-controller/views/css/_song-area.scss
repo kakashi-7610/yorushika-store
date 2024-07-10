@@ -1,0 +1,23 @@
+.song-area {
+  margin-top: 60px;
+
+  >.title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  >.title::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+  }
+
+  >.comment {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

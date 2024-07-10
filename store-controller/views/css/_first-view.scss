@@ -1,0 +1,19 @@
+.first-view {
+  //header分-110pxしている
+  height: calc(100vh - 110px);
+  background-image: url(../img/main/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center calc(50% - 20px);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .first-view {
+    //header分-50pxしている
+    height: calc(100vh - 50px);
+    background-image: url(../img/main/bg-main-mobile.jpg);
+    align-items: flex-start;
+  }
+}

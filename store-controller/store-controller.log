@@ -1,0 +1,25 @@
+2024/07/08 21:34:39 start.go:36: server start
+2024/07/08 21:34:55 start.go:36: server start
+2024/07/08 21:35:14 start.go:36: server start
+2024/07/08 21:41:57 server.go:30: start with: http://[::]:8080
+2024/07/08 21:41:57 start.go:43: server start
+2024/07/08 21:51:14 server.go:30: start with: http://[::]:8080
+2024/07/08 21:51:14 start.go:36: server start
+2024/07/08 21:53:03 server.go:25: failed to listen port 8080: listen localhost: unknown network localhost
+2024/07/08 21:53:35 server.go:30: start with: http://[::]:8080
+2024/07/08 21:53:35 start.go:36: server start
+2024/07/08 22:05:05 server.go:31: start with: http://[::]:8080
+2024/07/08 22:05:05 start.go:36: server start
+2024/07/08 22:10:22 server.go:31: start with: http://[::]:8080
+2024/07/08 22:10:22 start.go:36: server start
+2024/07/08 22:11:42 server.go:31: start with: http://[::]:8080
+2024/07/08 22:11:42 start.go:36: server start
+2024/07/08 22:12:45 server.go:31: start with: http://[::]:8080
+2024/07/08 22:12:45 start.go:36: server start
+2024/07/09 22:29:24 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/07/09 22:29:24 start.go:47: Server config: &{Hostname:localhost Port:8080 Static:./views}
+2024/07/09 22:29:24 server.go:54: server started
+2024/07/09 22:50:38 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/07/09 22:50:38 start.go:47: Server config: &{Hostname:localhost Port:8080 Static:./views}
+2024/07/09 22:50:38 server.go:54: server started
+2024/07/09 22:51:06 server.go:68: server stopped

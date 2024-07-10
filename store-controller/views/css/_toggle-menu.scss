@@ -1,0 +1,19 @@
+.toggle-menu {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .toggle-menu {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background-image: url(../img/header/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+}
