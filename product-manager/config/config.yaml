@@ -1,0 +1,11 @@
+server:
+  port: "8081"
+db:
+  hostname: "localhost"
+  port: "3306"
+  user: "mysql"
+  password: "Passw0rd!"
+  dbname: "yorushika_product"
+  retry: 5
+log:
+  filename: "product-manager.log"

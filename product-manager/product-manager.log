@@ -1,0 +1,70 @@
+2024/07/21 17:19:28 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/21 17:19:28 start.go:47: Server config: &{Port:8080}
+2024/07/21 17:19:28 server.go:56: server started
+2024/07/21 17:19:34 server.go:67: server stopped
+2024/07/25 22:07:22 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/25 22:07:22 start.go:47: Server config: &{Port:8081}
+2024/07/25 22:07:22 server.go:56: server started
+2024/07/25 22:14:35 server.go:67: server stopped
+2024/07/25 22:19:03 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/25 22:19:03 start.go:47: Server config: &{Port:8081}
+2024/07/25 22:19:03 server.go:56: server started
+2024/07/25 22:22:51 server.go:67: server stopped
+2024/07/25 22:22:55 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/25 22:22:55 start.go:47: Server config: &{Port:8081}
+2024/07/25 22:22:55 server.go:56: server started
+2024/07/25 22:23:07 server.go:67: server stopped
+2024/07/25 22:27:21 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/25 22:27:21 start.go:47: Server config: &{Port:8081}
+2024/07/25 22:27:21 server.go:56: server started
+2024/07/25 22:27:29 server.go:67: server stopped
+2024/07/25 22:27:54 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/25 22:27:54 start.go:47: Server config: &{Port:8081}
+2024/07/25 22:27:54 server.go:56: server started
+2024/07/25 22:28:05 server.go:67: server stopped
+2024/07/26 18:11:04 start.go:46: Log config: &{LogFile:product-manager.log}
+2024/07/26 18:11:04 start.go:47: Server config: &{Port:8081}
+2024/07/26 18:11:04 start.go:48: Db config: &{Hostname:localhost Port:3306 User:mysql Password:Passw0rd! DbName:yorushika_product}
+2024/07/26 18:11:04 server.go:56: server started
+2024/07/26 18:11:16 server.go:67: server stopped
+2024/07/26 18:16:41 start.go:52: Log config: &{LogFile:product-manager.log}
+2024/07/26 18:16:41 start.go:53: Server config: &{Port:8081}
+2024/07/26 18:16:41 database.go:40: Database connected
+2024/07/26 18:16:41 server.go:59: server started
+2024/07/26 18:17:32 server.go:70: server stopped
+2024/07/28 17:30:17 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/07/28 17:30:17 start.go:60: Server config: &{Port:8081}
+2024/07/28 17:30:17 database.go:40: Database connected
+2024/07/28 17:30:17 database.go:63: AutoMigrated database
+2024/07/28 17:30:17 server.go:59: server started
+2024/07/28 18:03:38 server.go:70: server stopped
+2024/07/28 18:03:44 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/07/28 18:03:44 start.go:60: Server config: &{Port:8081}
+2024/07/28 18:03:44 database.go:40: Database connected
+2024/07/28 18:03:44 server.go:59: server started
+2024/07/28 18:04:29 server.go:70: server stopped
+2024/07/28 18:04:57 start.go:68: Log config: &{LogFile:product-manager.log}
+2024/07/28 18:04:57 start.go:69: Server config: &{Port:8081}
+2024/07/28 18:04:57 database.go:40: Database connected
+2024/07/28 18:04:57 product_repository.go:25: created product. count: 1
+2024/07/28 18:04:57 server.go:59: server started
+2024/07/28 18:05:13 server.go:70: server stopped
+2024/07/28 18:21:15 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/07/28 18:21:15 start.go:60: Server config: &{Port:8081}
+2024/07/28 18:21:15 database.go:40: Database connected
+2024/07/28 18:21:15 server.go:59: server started
+2024/07/28 18:21:58 product_repository.go:37: list products. count: 1
+2024/07/28 18:22:18 server.go:70: server stopped
+2024/10/05 13:42:03 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/10/05 13:42:03 start.go:60: Server config: &{Port:8081}
+2024/10/05 13:42:03 database.go:40: Database connected
+2024/10/05 13:42:03 server.go:59: server started
+2024/10/05 13:42:04 product_repository.go:37: list products. count: 1
+2024/10/05 13:42:04 product_repository.go:37: list products. count: 1
+2024/10/05 13:42:30 server.go:70: server stopped
+2024/10/27 10:55:59 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/10/27 10:55:59 start.go:60: Server config: &{Port:8081}
+2024/10/27 10:55:59 database.go:40: Database connected
+2024/10/27 10:55:59 server.go:59: server started
+2024/10/27 10:56:13 product_repository.go:37: list products. count: 1
+2024/10/27 10:57:25 server.go:70: server stopped

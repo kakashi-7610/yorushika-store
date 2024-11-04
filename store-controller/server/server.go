@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"log"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -14,39 +15,43 @@ import (
 type Server struct {
 	srv *http.Server
 	sc  *ServerConfig
+	l   net.Listener
 }
 
 type ServerConfig struct {
-	Hostname string
-	Port     string
-	Static   string
+	Port   string
+	Static string
 }
 
 func NewServer(sc *ServerConfig) (*Server, error) {
-	addr := fmt.Sprintf("%s:%s", sc.Hostname, sc.Port)
 	mux, err := NewMux(sc)
 	if err != nil {
 		log.Fatalf("NewMux failed, error: %v", err)
 		return nil, err
 	}
 
+	listener, err := net.Listen("tcp", fmt.Sprintf(":%s", sc.Port))
+	if err != nil {
+		log.Fatalf("net.Listen failed. err:%v", err)
+	}
+
 	return &Server{
-		srv: &http.Server{Addr: addr, Handler: mux},
+		srv: &http.Server{Handler: mux},
 		sc:  sc,
+		l:   listener,
 	}, nil
 }
 
-func NewServerConfig(hostname string, port string, static string) *ServerConfig {
+func NewServerConfig(port string, static string) *ServerConfig {
 	return &ServerConfig{
-		Hostname: hostname,
-		Port:     port,
-		Static:   static,
+		Port:   port,
+		Static: static,
 	}
 }
 
 func (s *Server) Run(ctx context.Context) error {
 	go func() {
-		err := s.srv.ListenAndServe()
+		err := s.srv.Serve(s.l)
 		if err != nil {
 			log.Fatalf("server terminated %v", err)
 		}

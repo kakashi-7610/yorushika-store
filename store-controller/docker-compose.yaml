@@ -1,0 +1,68 @@
+services:
+  store-controller:
+    container_name: store-controller
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - product-net
+
+# DB立ち上がり前に接続してエラーになっている
+  product-manager:
+    container_name: product-manager
+    build:
+      context: ../product-manager
+      dockerfile: ./Dockerfile
+    expose:
+      - "8081"
+    # depend_onはあくまで起動順序の制御
+    depends_on:
+      - mysql
+    environment:
+      YPM_DB_DBNAME: yorushika
+      YPM_DB_HOSTNAME: yorushika_db
+    # volumes:
+    #   - ../product-manager/waitingMysql.sh:/usr/local/bin/waitingMysql.sh
+    networks:
+      - mysql-net
+      - product-net
+
+  mysql:
+    container_name: yorushika_db
+    image: mysql:8.0.36
+    # ホスト側からはアクセス不可、別コンテナからはアクセス可
+    expose:
+    - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: yorushika
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: Passw0rd!
+    restart: always
+    networks:
+      - mysql-net
+
+#viewer追加
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=yorushika_db
+      - PMA_USER=mysql
+      - PMA_PASSWORD=Passw0rd!
+    links:
+      - mysql
+    ports:
+      - 4040:80
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
+    networks:
+      - mysql-net
+
+networks:
+  mysql-net:
+    driver: bridge
+  product-net:
+    driver: bridge
