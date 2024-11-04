@@ -39,11 +39,6 @@ func NewConfigs() (*Configs, error) {
 	logConfig := NewLogConfig(filename)
 	logConfig.LoggingSettings()
 
-	hostname := v.GetString("server.hostname")
-	if len(hostname) == 0 {
-		err := fmt.Errorf("server hostname is not configured")
-		return nil, err
-	}
 	port := v.GetString("server.port")
 	if len(port) == 0 {
 		err := fmt.Errorf("server port is not configured")
@@ -54,7 +49,7 @@ func NewConfigs() (*Configs, error) {
 		err := fmt.Errorf("server static is not configured")
 		return nil, err
 	}
-	serverConfig := server.NewServerConfig(hostname, port, static)
+	serverConfig := server.NewServerConfig(port, static)
 
 	configs := &Configs{
 		LogConfig:    logConfig,
