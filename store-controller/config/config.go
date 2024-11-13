@@ -9,8 +9,9 @@ import (
 )
 
 type Configs struct {
-	LogConfig    *LogConfig
-	ServerConfig *server.ServerConfig
+	LogConfig           *LogConfig
+	ServerConfig        *server.ServerConfig
+	ProductServerConfig *server.ProductServerConfig
 }
 
 func NewConfigs() (*Configs, error) {
@@ -51,9 +52,22 @@ func NewConfigs() (*Configs, error) {
 	}
 	serverConfig := server.NewServerConfig(port, static)
 
+	productHost := v.GetString("product.host")
+	if len(productHost) == 0 {
+		err := fmt.Errorf("product host is not configured")
+		return nil, err
+	}
+	productPort := v.GetString("product.port")
+	if len(productPort) == 0 {
+		err := fmt.Errorf("product port is not configured")
+		return nil, err
+	}
+	productServerConfig := server.NewProductServerConfig(productHost, productPort)
+
 	configs := &Configs{
-		LogConfig:    logConfig,
-		ServerConfig: serverConfig,
+		LogConfig:           logConfig,
+		ServerConfig:        serverConfig,
+		ProductServerConfig: productServerConfig,
 	}
 
 	return configs, nil

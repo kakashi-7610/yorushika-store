@@ -63,3 +63,26 @@
 2024/10/27 10:58:11 start.go:47: Server config: &{Port:8080 Static:./views}
 2024/10/27 10:58:11 server.go:59: server started
 2024/10/27 10:58:58 server.go:56: server terminated http: Server closed
+2024/11/06 19:45:00 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/11/06 19:45:00 start.go:47: Server config: &{Port:8080 Static:./views}
+2024/11/06 19:45:00 server.go:59: server started
+2024/11/06 19:45:25 server.go:56: server terminated http: Server closed
+2024/11/06 21:25:24 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/11/06 21:25:24 start.go:47: Server config: &{Port:8080 Static:./views}
+2024/11/06 21:25:24 server.go:59: server started
+2024/11/06 21:26:10 server.go:73: server stopped
+2024/11/07 20:17:57 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/11/07 20:17:57 start.go:47: Server config: &{Port:8080 Static:./views}
+2024/11/07 20:17:57 server.go:59: server started
+2024/11/07 20:19:54 server.go:56: server terminated http: Server closed
+2024/11/07 22:20:28 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/11/07 22:20:28 start.go:47: Server config: &{Port:8080 Static:./views}
+2024/11/07 22:20:28 start.go:48: Product server config: &{Host:localhost Port:8081}
+2024/11/07 22:20:28 server.go:81: server started
+2024/11/07 22:21:30 server.go:95: server stopped
+2024/11/07 22:22:01 start.go:46: Log config: &{LogFile:store-controller.log}
+2024/11/07 22:22:01 start.go:47: Server config: &{Port:8080 Static:./views}
+2024/11/07 22:22:01 start.go:48: Product server config: &{Host:localhost Port:8081}
+2024/11/07 22:22:01 server.go:81: server started
+2024/11/07 22:22:26 index.go:17: productManagerAddr: localhost:8081
+2024/11/07 22:22:37 server.go:95: server stopped

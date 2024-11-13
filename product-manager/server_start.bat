@@ -1,4 +1,5 @@
 @echo off
 
 rem start product-manager
-go run main.go server start
+go build
+product-manager server start

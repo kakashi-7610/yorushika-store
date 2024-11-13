@@ -68,3 +68,55 @@
 2024/10/27 10:55:59 server.go:59: server started
 2024/10/27 10:56:13 product_repository.go:37: list products. count: 1
 2024/10/27 10:57:25 server.go:70: server stopped
+2024/11/06 19:40:50 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/06 19:40:50 start.go:60: Server config: &{Port:8081}
+2024/11/06 19:40:50 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/06 19:40:50 database.go:36: Waiting for MySQL container to
+2024/11/06 19:40:50 database.go:42: Database connected
+2024/11/06 19:40:50 server.go:59: server started
+2024/11/06 19:40:57 server.go:70: server stopped
+2024/11/06 19:43:14 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/06 19:43:14 start.go:60: Server config: &{Port:8081}
+2024/11/06 19:43:14 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/06 19:43:14 database.go:36: Waiting for MySQL container to
+2024/11/06 19:43:14 database.go:42: Database connected
+2024/11/06 19:43:14 server.go:59: server started
+2024/11/06 19:43:21 server.go:70: server stopped
+2024/11/06 19:44:49 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/06 19:44:49 start.go:60: Server config: &{Port:8081}
+2024/11/06 19:44:49 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/06 19:44:49 database.go:36: Waiting for MySQL container to
+2024/11/06 19:44:49 database.go:42: Database connected
+2024/11/06 19:44:49 server.go:59: server started
+2024/11/06 19:45:19 server.go:70: server stopped
+2024/11/06 21:25:36 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/06 21:25:36 start.go:60: Server config: &{Port:8081}
+2024/11/06 21:25:36 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/06 21:25:36 database.go:36: Waiting for MySQL container to
+2024/11/06 21:25:36 database.go:42: Database connected
+2024/11/06 21:25:36 server.go:59: server started
+2024/11/06 21:25:59 product_repository.go:37: list products. count: 1
+2024/11/06 21:26:08 server.go:70: server stopped
+2024/11/07 20:17:57 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/07 20:17:57 start.go:60: Server config: &{Port:8081}
+2024/11/07 20:17:57 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/07 20:17:57 database.go:36: Waiting for MySQL container to
+2024/11/07 20:17:57 database.go:42: Database connected
+2024/11/07 20:17:57 server.go:59: server started
+2024/11/07 20:19:10 product_repository.go:37: list products. count: 1
+2024/11/07 20:19:57 server.go:70: server stopped
+2024/11/07 22:20:38 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/07 22:20:38 start.go:60: Server config: &{Port:8081}
+2024/11/07 22:20:38 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/07 22:20:38 database.go:36: Waiting for MySQL container to
+2024/11/07 22:20:38 database.go:41: Database connected
+2024/11/07 22:20:38 server.go:59: server started
+2024/11/07 22:21:26 server.go:70: server stopped
+2024/11/07 22:22:01 start.go:59: Log config: &{LogFile:product-manager.log}
+2024/11/07 22:22:01 start.go:60: Server config: &{Port:8081}
+2024/11/07 22:22:01 database.go:35: mysql:Passw0rd!@tcp(localhost:3306)/yorushika_product?charset=utf8mb4&parseTime=True&loc=Local
+2024/11/07 22:22:01 database.go:36: Waiting for MySQL container to
+2024/11/07 22:22:01 database.go:41: Database connected
+2024/11/07 22:22:01 server.go:59: server started
+2024/11/07 22:22:26 product_repository.go:37: list products. count: 1
+2024/11/07 22:22:35 server.go:70: server stopped

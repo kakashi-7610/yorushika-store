@@ -29,7 +29,7 @@ to quickly create a Cobra application.`,
 		}
 		outputSettingInfo(configs)
 
-		s, err := server.NewServer(configs.ServerConfig)
+		s, err := server.NewServer(configs.ServerConfig, configs.ProductServerConfig)
 		if err != nil {
 			return err
 		}
@@ -45,6 +45,7 @@ to quickly create a Cobra application.`,
 func outputSettingInfo(cfgs *config.Configs) {
 	log.Printf("Log config: %+v", cfgs.LogConfig)
 	log.Printf("Server config: %+v", cfgs.ServerConfig)
+	log.Printf("Product server config: %+v", cfgs.ProductServerConfig)
 }
 
 func init() {

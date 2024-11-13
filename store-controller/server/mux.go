@@ -6,7 +6,7 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-func NewMux(sc *ServerConfig) (http.Handler, error) {
+func NewMux(sc *ServerConfig, psc *ProductServerConfig) (http.Handler, error) {
 	// ref: https://qiita.com/tjun/items/3eea798905b597ec83c0
 	// ref: https://peraimaru.work/go-chi%E3%81%A7%E9%9D%99%E7%9A%84%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E9%85%8D%E4%BF%A1%E3%81%97%E3%81%9F%E3%81%84%E6%99%82/
 	mux := chi.NewRouter()
@@ -20,6 +20,7 @@ func NewMux(sc *ServerConfig) (http.Handler, error) {
 		http.StripPrefix("/static/", fileServer).ServeHTTP(w, r)
 	})
 
-	mux.Get("/index", index)
+	ps := NewProductServer(psc)
+	mux.Get("/index", ps.index)
 	return mux, nil
 }
