@@ -5,4 +5,5 @@ COPY ./ ./
 RUN apt-get update
 RUN apt-get install -y iputils-ping
 RUN go mod tidy
-CMD go run main.go server start
+RUN go build
+CMD ./product-manager server start

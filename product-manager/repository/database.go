@@ -34,7 +34,6 @@ func NewDatabase(dc *DatabaseConfig) (*Database, error) {
 
 	log.Println(connectInfo)
 	log.Println("Waiting for MySQL container to")
-	var err error
 
 	for i := 0; i < dc.Retry; i++ {
 		db, err := gorm.Open(mysql.Open(connectInfo), &gorm.Config{})
@@ -43,12 +42,11 @@ func NewDatabase(dc *DatabaseConfig) (*Database, error) {
 			return &Database{db}, nil
 		}
 
-		time.Sleep(2 * time.Second) // 2秒待機
+		time.Sleep(10 * time.Second) // 10秒待機
 		fmt.Println("Retrying to connect to MySQL...")
 	}
 
-	log.Fatalf("failed to connect db. error: %v", err)
-	return nil, err
+	return nil, fmt.Errorf("failed to connect db")
 }
 
 func NewDatabaseConfig(hostname string, port string, user string, password string, dbname string, retry int) *DatabaseConfig {

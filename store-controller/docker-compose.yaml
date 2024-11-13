@@ -4,6 +4,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    environment:
+      YSC_PRODUCT_HOST: product-manager
+      YSC_PRODUCT_PORT: 8081
     ports:
       - 8080:8080
     networks:
@@ -41,6 +44,10 @@ services:
       MYSQL_USER: mysql
       MYSQL_PASSWORD: Passw0rd!
     restart: always
+    volumes:
+      # 下記パスに格納しておくと勝手に実行される
+      - ../product-manager/db/ddl:/docker-entrypoint-initdb.d
+      - ../product-manager/db/conf:/etc/mysql/conf.d
     networks:
       - mysql-net
 
@@ -54,10 +61,10 @@ services:
       - PMA_PASSWORD=Passw0rd!
     links:
       - mysql
+    depends_on:
+      - mysql
     ports:
       - 4040:80
-    volumes:
-      - ./phpmyadmin/sessions:/sessions
     networks:
       - mysql-net
 

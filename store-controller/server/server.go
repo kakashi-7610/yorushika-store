@@ -23,8 +23,17 @@ type ServerConfig struct {
 	Static string
 }
 
-func NewServer(sc *ServerConfig) (*Server, error) {
-	mux, err := NewMux(sc)
+type ProductServer struct {
+	psc *ProductServerConfig
+}
+
+type ProductServerConfig struct {
+	Host string
+	Port string
+}
+
+func NewServer(sc *ServerConfig, psc *ProductServerConfig) (*Server, error) {
+	mux, err := NewMux(sc, psc)
 	if err != nil {
 		log.Fatalf("NewMux failed, error: %v", err)
 		return nil, err
@@ -42,10 +51,23 @@ func NewServer(sc *ServerConfig) (*Server, error) {
 	}, nil
 }
 
+func NewProductServer(psc *ProductServerConfig) *ProductServer {
+	return &ProductServer{
+		psc: psc,
+	}
+}
+
 func NewServerConfig(port string, static string) *ServerConfig {
 	return &ServerConfig{
 		Port:   port,
 		Static: static,
+	}
+}
+
+func NewProductServerConfig(host string, port string) *ProductServerConfig {
+	return &ProductServerConfig{
+		Host: host,
+		Port: port,
 	}
 }
 

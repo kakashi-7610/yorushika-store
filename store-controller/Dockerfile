@@ -6,4 +6,5 @@ RUN apt-get update
 RUN apt-get install -y iputils-ping
 RUN go mod tidy
 # CMD sh waitingMysql.sh
-CMD go run main.go server start
+RUN go build
+CMD ./store-controller server start
