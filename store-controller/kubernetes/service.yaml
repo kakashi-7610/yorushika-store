@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-service
+  namespace: tesx
+spec:
+  type: LoadBalancer
+  selector:
+    app: sc-app
+  ports:
+    - protocol: TCP
+      port: 8080     # Serviceのポート
+      targetPort: 80 # Podのポート
+      

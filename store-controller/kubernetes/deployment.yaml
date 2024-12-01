@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-controller-dep
+  namespace: tesx
+  labels:
+    app: sc-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sc-app
+  template:
+    metadata:
+      labels:
+        app: sc-app
+    spec:
+      containers:
+        - name: store-controller
+          image: store-controller:latest
+          # 起動時に毎回レジストリに問い合わせて起動する
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          # Pod内のコンテナが正常に動作しているかの確認。異常の時は、Podを再起動する
+          readinessProbe:
+            httpGet:
+              port: 80
+              path: /health
+            # 起動後、15秒後からreadinessProbeを開始
+            initialDelaySeconds: 15
+            # 30秒間間隔でチェックを行う
+            periodSeconds: 30
+          # Podがリクエストを受け付けることができるかの確認。異常の時は、リクエストを受け付けない
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /health
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          # resources:                  
+          #   requests:
+          #     cpu: 100m
+          #     memory: 512Mi
+          #   limits:
+          #     cpu: 250m
+          #     memory: 768Mi
+      
