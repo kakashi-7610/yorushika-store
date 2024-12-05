@@ -1,0 +1,15 @@
+minikube環境にimageをロード
+minikube image load <image-name>:<image-tag>
+minikube image ls
+
+kustomization.yamlを使用する場合はapply -kオプションを使う。
+namespaceごとのリソースを確認したい場合、--namespace=<名前>オプションを使う。
+namespace永続化　kubectl config set-context --current --namespace=<名前>
+
+ログ解析
+logsやdescribeが便利
+
+minikube環境に一時的にマウント
+minikube mount /home/shanks/yorushika-store:/home/shanks/yorushika-store
+minikubeのロードバランサーを外部と接続
+minikube tunnel
