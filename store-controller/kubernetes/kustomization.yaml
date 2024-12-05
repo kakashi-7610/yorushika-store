@@ -1,4 +1,8 @@
 resources:
-  - deployment.yaml
   - namespace.yaml
-  - service.yaml
+  - sc-deployment.yaml
+  - sc-service.yaml
+  - pm-deployment.yaml
+  - pm-service.yaml
+  - mysql-deployment.yaml
+  - mysql-service.yaml

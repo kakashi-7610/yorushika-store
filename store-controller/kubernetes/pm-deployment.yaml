@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-manager-dep
+  namespace: tesx
+  labels:
+    app: pm-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pm-app
+  template:
+    metadata:
+      labels:
+        app: pm-app
+    spec:
+      containers:
+        - name: product-manager
+          image: product-manager:latest
+          env:
+          - name: YPM_DB_DBNAME
+            value: "yorushika"
+          - name: YPM_DB_HOSTNAME
+            value: "mysql-service"
+          # ローカルにないならレジストリに問い合わせて起動する
+          imagePullPolicy: IfNotPresent
+          ports:
+          - containerPort: 8081
+      

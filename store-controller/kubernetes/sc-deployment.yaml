@@ -6,7 +6,7 @@ metadata:
   labels:
     app: sc-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: sc-app
@@ -18,14 +18,19 @@ spec:
       containers:
         - name: store-controller
           image: store-controller:latest
-          # 起動時に毎回レジストリに問い合わせて起動する
-          imagePullPolicy: Always
+          env:
+          - name: YSC_PRODUCT_HOST
+            value: "pm-service"
+          - name: YSC_PRODUCT_PORT
+            value: "8081"
+          # ローカルになければレジストリに問い合わせて起動する
+          imagePullPolicy: IfNotPresent
           ports:
-          - containerPort: 80
+          - containerPort: 8080
           # Pod内のコンテナが正常に動作しているかの確認。異常の時は、Podを再起動する
           readinessProbe:
             httpGet:
-              port: 80
+              port: 8080
               path: /health
             # 起動後、15秒後からreadinessProbeを開始
             initialDelaySeconds: 15
@@ -34,7 +39,7 @@ spec:
           # Podがリクエストを受け付けることができるかの確認。異常の時は、リクエストを受け付けない
           livenessProbe:
             httpGet:
-              port: 80
+              port: 8080
               path: /health
             initialDelaySeconds: 30
             periodSeconds: 30

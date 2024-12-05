@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-dep
+  namespace: tesx
+  labels:
+    app: mysql-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-db
+  template:
+    metadata:
+      labels:
+        app: mysql-db
+    spec:
+      containers:
+        - name: yorushika-db
+          image: mysql:8.0.36
+          env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "mysql"
+          - name: MYSQL_DATABASE
+            value: "yorushika"
+          - name: MYSQL_USER
+            value: "mysql"
+          - name: MYSQL_PASSWORD
+            value: "Passw0rd!"
+          # ローカルになければレジストリに問い合わせて起動する
+          imagePullPolicy: IfNotPresent
+          ports:
+          - containerPort: 3306
+          volumeMounts:
+            - name: ddl-volume
+              mountPath: /docker-entrypoint-initdb.d
+            - name: conf-volume
+              mountPath: /etc/mysql/conf.d
+      volumes:
+        - name: ddl-volume
+          hostPath:
+            path: /home/shanks/yorushika-store/product-manager/db/ddl
+        - name: conf-volume
+          hostPath:
+            path: /home/shanks/yorushika-store/product-manager/db/conf
+      
